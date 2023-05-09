@@ -24,7 +24,7 @@ int print_how_to_play_screen()
 	printf("##                           ##\n");
 	printf("##  Press Space Bar To Jump  ##\n");
 	printf("##                           ##\n");
-    printf("###############################\n");
+    	printf("###############################\n");
 
 	return 0;
 }
@@ -32,17 +32,19 @@ int print_how_to_play_screen()
 int main()
 {
 	int game_state = 1;
-	
-	/* 게임 루프
-	 * while문이 계속 반복해서 입력을 받는다.
-	 * 입력받은 값을 game_state에 저장한다.
-	 */
-	while(game_state)
-	{
-		printf("input>");
-		scanf("%d", &game_state);
-	}
 
+	char map[450];	/* 가로 : 30 + 1(개행문자)  세로 15  */
+	
+	int i = 0;
+	while(i<450)
+	{
+      		map[i]='0';
+		i=i+1;
+	}
+	
+	map[2] = '\0';
+
+	printf("%s", map);
 
 	return 0;
 }
